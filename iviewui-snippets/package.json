@@ -1,0 +1,21 @@
+{
+    "name": "iviewui-snippets",
+    "displayName": "iviewui-snippets",
+    "description": "A Visual Studio Code extension for easily using iviewui components.",
+    "version": "0.0.1",
+    "publisher": "greggu",
+    "engines": {
+        "vscode": "^1.13.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "vue",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

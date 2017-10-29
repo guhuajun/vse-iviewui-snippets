@@ -1,0 +1,319 @@
+{
+    "iviewui Grid (Horizontal)": {
+        "prefix": "iviewui-grid-horizontal",
+        "description": "",
+        "body": [
+            "<template>",
+            "  <Row>",
+            "    <Col span=\"12\">col-12</Col>",
+            "    <Col span=\"12\">col-12</Col>",
+            "  </Row>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "    ",
+            "  }",
+            "</script>"
+        ]
+    },
+    "iviewui Grid (Gutter)": {
+        "prefix": "iviewui-grid-gutter",
+        "description": "",
+        "body": [
+            "<template>",
+            "  <Row :gutter=\"16\">",
+            "    <Col span=\"6\">",
+            "      <div>col-6</div>",
+            "    </Col>",
+            "    <Col span=\"6\">",
+            "      <div>col-6</div>",
+            "    </Col>",
+            "    <Col span=\"6\">",
+            "      <div>col-6</div>",
+            "     </Col>",
+            "    <Col span=\"6\">",
+            "       <div>col-6</div>",
+            "    </Col>",
+            "  </Row>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "    ",
+            "  }",
+            "</script>"
+        ]
+    },
+    "iviewui Grid (Flex)": {
+        "prefix": "iviewui-grid-flex",
+        "descrition": "",
+        "body": [
+            "<template>",
+            "  <Row type=\"flex\">",
+            "    <Col span=\"6\" order=\"4\">1 | order-4</Col>",
+            "    <Col span=\"6\" order=\"3\">2 | order-3</Col>",
+            "    <Col span=\"6\" order=\"2\">3 | order-2</Col>",
+            "    <Col span=\"6\" order=\"1\">4 | order-1</Col>",
+            "  </Row>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "     ",
+            "  }",
+            "</script>"
+        ]
+    },
+    "iviewui Grid (Offset)": {
+        "prefix": "iviewui-grid-offset",
+        "descrition": "",
+        "body": [
+            "<template>",
+            "  <Row>",
+            "    <Col span=\"8\">col-8</Col>",
+            "    <Col span=\"8\" offset=\"8\">col-8 | offset-8</Col>",
+            "  </Row>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "    ",
+            "  }",
+            "</script>"
+        ]
+    },
+    "iviewui Grid (Flex Justify)": {
+        "prefix": "iviewui-grid-flex-justify",
+        "descrition": "",
+        "body": [
+            "<template>",
+            "  <Row type=\"flex\" justify=\"[start|end|center|space-between|space-around]\" class=\"code-row-bg\">",
+            "    <Col span=\"4\">col-4</Col>",
+            "    <Col span=\"4\">col-4</Col>",
+            "    <Col span=\"4\">col-4</Col>",
+            "    <Col span=\"4\">col-4</Col>",
+            "  </Row>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "    ",
+            "  }",
+            "</script>"
+        ]
+    },
+    "iviewui Grid (Flex Align)": {
+        "prefix": "iviewui-grid-flex-align",
+        "descrition": "",
+        "body": [
+            "<template>",
+            "  <Row type=\"flex\" justify=\"center\" align=\"[top|bottom|middle]\" class=\"code-row-bg\">",
+            "    <Col span=\"4\"><p style=\"height: 80px\">col-4</p></Col>",
+            "    <Col span=\"4\"><p style=\"height: 30px\">col-4</p></Col>",
+            "    <Col span=\"4\"><p style=\"height: 100px\">col-4</p></Col>",
+            "    <Col span=\"4\"><p style=\"height: 60px\">col-4</p></Col>",
+            "  </Row>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "    ",
+            "  }",
+            "</script>"
+        ]
+    },
+    "iviewui Grid (Reactive)": {
+        "prefix": "iviewui-grid-flex-reactive",
+        "descrition": "",
+        "body": [
+            "<template>",
+            "  <Row>",
+            "    <Col :xs=\"2\" :sm=\"4\" :md=\"6\" :lg=\"8\">Col</Col>",
+            "    <Col :xs=\"20\" :sm=\"16\" :md=\"12\" :lg=\"8\">Col</Col>",
+            "    <Col :xs=\"2\" :sm=\"4\" :md=\"6\" :lg=\"8\">Col</Col>",
+            "  </Row>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "    ",
+            "  }",
+            "</script>"
+        ]
+    },
+    "iviewui Grid (Other Attributes)": {
+        "prefix": "iviewui-grid-flex-reactive-attrs",
+        "descrition": "",
+        "body": [
+            "<template>",
+            "  <Row>",
+            "    <Col :xs=\"{ span: 5, offset: 1 }\" :lg=\"{ span: 6, offset: 2 }\">Col</Col>",
+            "    <Col :xs=\"{ span: 11, offset: 1 }\" :lg=\"{ span: 6, offset: 2 }\">Col</Col>",
+            "    <Col :xs=\"{ span: 5, offset: 1 }\" :lg=\"{ span: 6, offset: 2 }\">Col</Col>",
+            "  </Row>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "    ",
+            "  }",
+            "</script>"
+        ]
+    },
+    "iviewui Button (Basic)": {
+        "prefix": "iviewui-button-basic",
+        "description": "",
+        "body":[
+            "<template>",
+            "  <Button>Default</Button>",
+            "  <Button type=\"[primary|ghost|dashed|text|info|success|warning|error]\">Text</Button>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "    ",
+            "  }",
+            "</script>"
+        ]
+    },
+    "iviewui Button (Icon)": {
+        "prefix": "iviewui-button-icon",
+        "description": "",
+        "body":[
+            "<template>",
+            "  <Button type=\"primary\" shape=\"circle\" icon=\"ios-search\"></Button>",
+            "  <Button type=\"primary\" icon=\"ios-search\">搜索</Button>",
+            "  <Button type=\"primary\" shape=\"circle\" icon=\"ios-search\">搜索</Button>",
+            "  <Button type=\"primary\" shape=\"circle\">圆角按钮</Button>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "    ",
+            "  }",
+            "</script>"
+        ]
+    },
+    "iviewui Button (Size)": {
+        "prefix": "iviewui-button-size",
+        "description": "",
+        "body":[
+            "<template>",
+            "  <Button type=\"primary\" size=\"large\">Large</Button>",
+            "  <Button type=\"primary\">Default</Button>",
+            "  <Button type=\"primary\" size=\"small\">Small</Button>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "    ",
+            "  }",
+            "</script>"
+        ]
+    },
+    "iviewui Button (Long)": {
+        "prefix": "iviewui-button-long",
+        "description": "",
+        "body":[
+            "<template>",
+            "  <Button type=\"success\" long>确认提交</Button>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "    ",
+            "  }",
+            "</script>"
+        ]
+    },
+    "iviewui Button (Disabled)": {
+        "prefix": "iviewui-button-disabled",
+        "description": "",
+        "body":[
+            "<template>",
+            "  <Button>Default</Button>",
+            "  <Button disabled>Default(Disabled)</Button>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "    ",
+            "  }",
+            "</script>"
+        ]
+    },
+    "iviewui Button (Loading)": {
+        "prefix": "iviewui-button-loading",
+        "description": "",
+        "body":[
+            "<template>",
+            "  <Button type=\"primary\" loading>Loading...</Button>",
+            "  <Button type=\"primary\" :loading=\"loading\" @click=\"toLoading\">",
+            "    <span v-if=\"!loading\">Click me!</span>",
+            "    <span v-else>Loading...</span>",
+            "  </Button>",
+            "  <Button type=\"primary\" :loading=\"loading2\" icon=\"checkmark-round\" @click=\"toLoading2\">",
+            "    <span v-if=\"!loading2\">Click me!</span>",
+            "    <span v-else>Loading...</span>",
+            "  </Button>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "  data () {",
+            "      return {",
+            "          loading: false,",
+            "          loading2: false",
+            "      }",
+            "  },",
+            "  methods: {",
+            "      toLoading () {",
+            "          this.loading = true;",
+            "      },",
+            "      toLoading2 () {",
+            "          this.loading2 = true;",
+            "      }",
+            "  }",
+            "}",
+            "</script>"
+        ]
+    },
+    "iviewui Button Group": {
+        "prefix": "iviewui-button-group",
+        "description": "",
+        "body":[
+            "<template>",
+            "  <ButtonGroup>",
+            "    <Button>取消</Button>",
+            "    <Button type=\"primary\">确定</Button>",
+            "  </ButtonGroup>",
+            "  <ButtonGroup>",
+            "    <Button disabled>昨日</Button>",
+            "    <Button disabled>今日</Button>",
+            "    <Button disabled>明日</Button>",
+            "  </ButtonGroup>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "    ",
+            "  }",
+            "</script>"
+        ]
+    },
+    "iviewui Button Group Vertical": {
+        "prefix": "iviewui-button-group-vertical",
+        "description": "",
+        "body":[
+            "<template>",
+            "  <ButtonGroup>",
+            "    <Button>取消</Button>",
+            "    <Button type=\"primary\">确定</Button>",
+            "  </ButtonGroup>",
+            "  <ButtonGroup>",
+            "    <Button disabled>昨日</Button>",
+            "    <Button disabled>今日</Button>",
+            "    <Button disabled>明日</Button>",
+            "  </ButtonGroup>",
+            "</template>",
+            "<script>",
+            "  export default {",
+            "    ",
+            "  }",
+            "</script>"
+        ]
+    },
+    "iviewui Icon": {
+        "prefix": "iviewui-icon",
+        "description": "",
+        "body":[
+            "<Icon type=\"checkmark\" />"
+        ]
+    }
+}
