@@ -7,6 +7,14 @@
     "engines": {
         "vscode": "^1.13.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/guhuajun/vse-iviewui-snippets"
+    },
+    "keywords": [
+        "iview",
+        "vue"
+    ],
     "categories": [
         "Snippets"
     ],
