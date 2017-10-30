@@ -25,5 +25,6 @@
                 "path": "./snippets/snippets.json"
             }
         ]
-    }
+    },
+    "icon": "icon.png"
 }
