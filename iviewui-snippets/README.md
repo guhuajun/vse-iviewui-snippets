@@ -4,32 +4,23 @@ A Visual Studio Code extension for easily using iviewui components.
 
 ## Using
 
-* iviewui Grid (Horizontal)
-* iviewui Grid (Gutter)
-* iviewui Grid (Flex)
-* iviewui Grid (Offset)
-* iviewui Grid (Flex Justify)
-* iviewui Grid (Flex Align)
-* iviewui Grid (Reactive)
-* iviewui Grid (Other Attributes)
-* iviewui Button (Basic)
-* iviewui Button (Icon)
-* iviewui Button (Size)
-* iviewui Button (Long)
-* iviewui Button (Disabled)
-* iviewui Button (Loading)
-* iviewui Button Group
-* iviewui Button Group (Vertical)
+* iviewui Grid
+* iviewui Button
 * iviewui Icon
 * iviewui Form Input
-* iviewui Form Input (Size)
-* iviewui Form Input (Icon)
-* iviewui Form Input (Textarea, Rows)
-* iviewui Form Input (Autosize)
-* iviewui Form Input (Disabled)
-* iviewui Form Input (Composite)
+* iviewui Form Radio
+* iviewui Form Checkbox
+* iviewui Form Switch
+* iviewui Form Table
 
 ## Release Notes
+
+### 0.0.2
+
+* Add form radio
+* Add form checkbox
+* Add form switch
+* Add form table
 
 ### 0.0.1
 

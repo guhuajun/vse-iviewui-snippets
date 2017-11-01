@@ -1,7 +1,12 @@
-# Change Log
-All notable changes to the "iviewui-snippets" extension will be documented in this file.
+## Changelog
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+### 0.0.2
 
-## [Unreleased]
-- Initial release
+* Add form radio
+* Add form checkbox
+* Add form switch
+* Add form table
+
+### 0.0.1
+
+* Initial release.

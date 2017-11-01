@@ -1,13 +1,37 @@
 <template>
-  <Row type="flex" justify="[start|end|center|space-between|space-around]" class="code-row-bg">
-    <Col span="4">col-4</Col>
-    <Col span="4">col-4</Col>
-    <Col span="4">col-4</Col>
-    <Col span="4">col-4</Col>
-  </Row>
+  <Table :columns="columns1" :data="data1"></Table>
 </template>
 <script>
-  export default {
-    
+export default {
+  data() {
+    return {
+      columns1: [
+        {
+          title: "name",
+          key: "name"
+        },
+        {
+          title: "age",
+          key: "age"
+        },
+        {
+          title: "address",
+          key: "address"
+        }
+      ],
+      data1: [
+        {
+          name: "John Doe",
+          age: 18,
+          address: "Beijing"
+        },
+        {
+          name: "Jane Doe",
+          age: 25,
+          address: "Shanghai"
+        }
+      ]
+    };
   }
+};
 </script>
