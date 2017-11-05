@@ -17,8 +17,9 @@ class SnippetspiderSpider(scrapy.Spider):
 
     def parse_component(self, response):
         '''get example'''
-        examples = response.xpath('//article/div[@class="example]')
-        print(examples)
+        examples = response.xpath('//article/div[@class="example"]')
+        for example in examples:
+            print(example)
 
     def parse_page(self, response):
         '''get component name'''
@@ -31,3 +32,4 @@ class SnippetspiderSpider(scrapy.Spider):
                 callback=self.parse_component, endpoint='render.html', args={
                     'wait': 10
                 })
+            # break
