@@ -17,7 +17,7 @@ class SnippetspiderSpider(scrapy.Spider):
 
     def parse_component(self, response):
         '''get example'''
-        examples = response.xpath('//article/div[@class="example"]')
+        examples = response.xpath('//span[@class="copy"]')
         for example in examples:
             print(example)
 
@@ -28,7 +28,7 @@ class SnippetspiderSpider(scrapy.Spider):
             text = str(menu.xpath('text()').extract())
             component = ''.join(text.split(' ')[0][2:]).lower()
             yield SplashRequest(
-                'https://www.iviewui.com/components/{0}'.format(component),
+                'https://www.iviewui.com/components/{0}-en'.format(component),
                 callback=self.parse_component, endpoint='render.html', args={
                     'wait': 10
                 })
