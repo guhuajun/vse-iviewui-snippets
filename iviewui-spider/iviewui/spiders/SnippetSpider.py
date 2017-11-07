@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from scrapy_splash import SplashRequest
+from bs4 import BeautifulSoup
+
+from iviewui.items import Snippet
 
 class SnippetspiderSpider(scrapy.Spider):
     name = 'SnippetSpider'
@@ -17,9 +20,25 @@ class SnippetspiderSpider(scrapy.Spider):
 
     def parse_component(self, response):
         '''get example'''
-        examples = response.xpath('//span[@class="copy"]')
+
+        component = response.xpath('//article/h1/text()').extract()[0].lower()
+        examples = response.xpath('//article/div[@class="example ivu-row"]')
         for example in examples:
-            print(example)
+            snippet = Snippet()
+            example_id = example.xpath('@id').extract()[0]
+            example_name = example.xpath('@id').extract()[0].lower()
+            example_name = example_name.replace(' ', '-')
+            code = example.xpath('//code/child::*').extract()
+            code = '\n'.join(code)
+
+            snippet['prefix'] = 'iviewui-{0}-{1}'.format(component, example_name)
+            snippet['description'] = example_id
+            snippet['body'] = BeautifulSoup(code, 'lxml').text
+
+            print(snippet)
+            break
+
+            # yield snippet
 
     def parse_page(self, response):
         '''get component name'''
@@ -32,4 +51,4 @@ class SnippetspiderSpider(scrapy.Spider):
                 callback=self.parse_component, endpoint='render.html', args={
                     'wait': 10
                 })
-            # break
+            break

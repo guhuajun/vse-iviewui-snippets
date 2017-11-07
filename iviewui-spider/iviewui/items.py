@@ -8,7 +8,8 @@
 import scrapy
 
 
-class IviewuiItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class Snippet(scrapy.Item):
+
+    prefix = scrapy.Field()
+    description = scrapy.Field()
+    body = scrapy.Field()
