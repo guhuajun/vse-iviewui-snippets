@@ -47,7 +47,7 @@ CONCURRENT_REQUESTS_PER_IP = 1
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 SPIDER_MIDDLEWARES = {
-   'iviewui.middlewares.IviewuiSpiderMiddleware': 543,    
+    'iviewui.middlewares.IviewuiSpiderMiddleware': 543,    
 }
 
 # Enable or disable downloader middlewares
@@ -56,6 +56,7 @@ DOWNLOADER_MIDDLEWARES = {
     'scrapy_splash.SplashCookiesMiddleware': 723,
     'scrapy_splash.SplashMiddleware': 725,
     'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
+    'scrapy.downloadermiddlewares.retry.RetryMiddleware': 900
 }
 
 # Enable or disable extensions

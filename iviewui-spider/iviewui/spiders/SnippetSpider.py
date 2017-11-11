@@ -55,4 +55,3 @@ class SnippetspiderSpider(scrapy.Spider):
                 callback=self.parse_component, endpoint='render.html', args={
                     'wait': 10
                 })
-            break
