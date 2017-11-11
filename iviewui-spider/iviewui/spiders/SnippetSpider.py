@@ -28,17 +28,21 @@ class SnippetspiderSpider(scrapy.Spider):
             example_id = example.xpath('@id').extract()[0]
             example_name = example.xpath('@id').extract()[0].lower()
             example_name = example_name.replace(' ', '-')
+
             code = example.xpath('//code/child::*').extract()
             code = '\n'.join(code)
+            code = BeautifulSoup(code, 'lxml').text
+            code = BeautifulSoup(code, 'lxml').prettify()
+            code = code.split('\n')
+            code = list(filter(
+                lambda x: x not in ['<html>', '</html>', ' <body>', ' </body>'], code))
+            code = [x[2:] for x in code]
 
             snippet['prefix'] = 'iviewui-{0}-{1}'.format(component, example_name)
             snippet['description'] = example_id
-            snippet['body'] = BeautifulSoup(code, 'lxml').text
+            snippet['body'] = code
 
-            print(snippet)
-            break
-
-            # yield snippet
+            yield snippet
 
     def parse_page(self, response):
         '''get component name'''

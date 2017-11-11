@@ -1,0 +1,4 @@
+scrapy
+scrapy-splash
+beautifulsoup4
+simplejson
