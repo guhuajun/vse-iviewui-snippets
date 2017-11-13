@@ -22,7 +22,8 @@ class SnippetspiderSpider(scrapy.Spider):
         '''get example'''
 
         component = response.xpath('//article/h1/text()').extract()[0].lower()
-        examples = response.xpath('//article/div[@class="example ivu-row"]')
+        examples = response.xpath(
+            '//article/div[@class="example ivu-row"')
         for example in examples:
             snippet = Snippet()
             example_id = example.xpath('@id').extract()[0]
