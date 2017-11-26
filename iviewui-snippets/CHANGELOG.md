@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.0.3
+
+* Using scrapy and scrapy-splash to retrieve all examples.
+
 ### 0.0.2
 
 * Add form radio
