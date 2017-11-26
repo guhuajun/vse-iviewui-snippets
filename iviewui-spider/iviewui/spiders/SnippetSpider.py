@@ -23,14 +23,14 @@ class SnippetspiderSpider(scrapy.Spider):
 
         component = response.xpath('//article/h1/text()').extract()[0].lower()
         examples = response.xpath(
-            '//article/div[@class="example ivu-row"')
+            '//article/div[@class="example ivu-row"]')
         for example in examples:
             snippet = Snippet()
             example_id = example.xpath('@id').extract()[0]
             example_name = example.xpath('@id').extract()[0].lower()
             example_name = example_name.replace(' ', '-')
 
-            code = example.xpath('//code/child::*').extract()
+            code = example.xpath('div/div/div/pre/code/child::*').extract()
             code = '\n'.join(code)
             code = BeautifulSoup(code, 'lxml').text
             code = BeautifulSoup(code, 'lxml').prettify()
